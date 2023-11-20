@@ -12,7 +12,6 @@ namespace TableTest1.Data
         public int Id { get; set; }
         public string Name { get; set; }
         public int Year { get; set; }
-        public int Art { get; set; }
         public string Janr { get; set; }
         public string Description { get; set; }
         public int GroupId { get; set; }
