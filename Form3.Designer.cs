@@ -1,14 +1,14 @@
 ﻿namespace TableTest1
 {
-    partial class Form1
+    partial class Form3
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,37 +23,23 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
             SuspendLayout();
             // 
-            // button1
-            // 
-            button1.Location = new Point(12, 692);
-            button1.Name = "button1";
-            button1.Size = new Size(193, 60);
-            button1.TabIndex = 1;
-            button1.Text = "Add  new book";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // Form1
+            // Form3
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1465, 783);
-            Controls.Add(button1);
-            Name = "Form1";
-            Text = "Form1";
-            Load += Form1_Load;
+            ClientSize = new Size(866, 940);
+            Name = "Form3";
+            Text = "Form3";
             ResumeLayout(false);
         }
 
         #endregion
-        private Button button1;
     }
 }

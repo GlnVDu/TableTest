@@ -8,9 +8,9 @@ namespace TableTest1.Data
 {
     internal class Author
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Country { get; set; }
+        public int Id { get; set; } 
+        public string? Name { get; set; }
+        public string? Country { get; set; }
         public ICollection<Books> Book { get; set; }
 
     }
