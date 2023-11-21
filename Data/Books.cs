@@ -15,6 +15,10 @@ namespace TableTest1.Data
         public string? Janr { get; set; }
         public string? Description { get; set; }
         public int AuthorId { get; set; }
-        public Group Book;
+        public Author? Author { get; set; }
+        public override string ToString()
+        {
+            return $"{Name}";
+        }
     }
 }

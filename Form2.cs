@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using TableTest1.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.SqlClient;
+using Newtonsoft.Json;
 
 namespace TableTest1
 {
@@ -19,6 +20,7 @@ namespace TableTest1
         public Form2()
         {
             InitializeComponent();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -34,32 +36,26 @@ namespace TableTest1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using DataContext DataContext = new DataContext();
+
+            using DataContext DC = new DataContext();
+            var author = DC.Author.ToList();
+            foreach (var ath in author)
+            {
+                comboBox1.Items.Add(ath);
+            }
+
+            Books a = new() { Name = textBox1.Text, Year = Convert.ToInt32(textBox5.Text), Janr = textBox4.Text};
+
+            DC.Books.Add(a);
             
-            string nameBook = textBox1.Text;
-            Books a = new Books() { Name = nameBook };
-            DataContext.Books.Add(a);
-            DataContext.SaveChanges();
+                DC.SaveChanges();
+            Close();
+            MessageBox.Show("Book was added");
+        }
 
-            string nameYear = textBox3.Text;
-            int i = Convert.ToInt32(nameYear);
-            Books b = new Books() { Year = i };
-            DataContext.Books.Add(b);
-            DataContext.SaveChanges();
-
-            string nameJanr = textBox4.Text;
-            Books c = new Books() { Janr = nameJanr };
-            DataContext.Books.Add(c);
-            DataContext.SaveChanges();
-
-            string nameAuthor = textBox5.Text;
-            Author z = new Author() { Name = nameAuthor };
-            DataContext.Author.Add(z);
-            DataContext.SaveChanges();
-
-
-
-
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
