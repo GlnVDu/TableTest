@@ -10,7 +10,7 @@ namespace TableTest1.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder) ;
-            optionsBuilder.UseSqlServer("Server=(localdb);Database=Bible;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=Bible;Trusted_Connection=True;");
         }
     }
 }
